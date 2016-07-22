@@ -12,6 +12,11 @@
 	 display:block;
 	 border-radius:50%;
 }
+.active
+{
+	color:white !important;
+	background:black;
+}
 #input_bar{font-size:40px; padding:2px; border:0px; border-bottom:solid 1px; text-align: center; margin:30px; padding:20px;}
 #notification
 {

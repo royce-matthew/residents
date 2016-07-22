@@ -4,26 +4,31 @@ class ResidentsController < ApplicationController
   # GET /residents
   # GET /residents.json
   def index
+    @page="hookers"
     @residents = Resident.all
   end
 
   # GET /residents/1
   # GET /residents/1.json
   def show
+    @page="hookers"
   end
 
   # GET /residents/new
   def new
+    @page="hookers"
     @resident = Resident.new
   end
 
   # GET /residents/1/edit
   def edit
+    @page="hookers"
   end
 
   # POST /residents
   # POST /residents.json
   def create
+    @page="hookers"
     @resident = Resident.new(resident_params)
 
     respond_to do |format|
@@ -40,6 +45,7 @@ class ResidentsController < ApplicationController
   # PATCH/PUT /residents/1
   # PATCH/PUT /residents/1.json
   def update
+    @page="hookers"
     respond_to do |format|
       if @resident.update(resident_params)
         format.html { redirect_to @resident, notice: 'Resident was successfully updated.' }
@@ -54,6 +60,7 @@ class ResidentsController < ApplicationController
   # DELETE /residents/1
   # DELETE /residents/1.json
   def destroy
+    @page="hookers"
     @resident.destroy
     respond_to do |format|
       format.html { redirect_to residents_url, notice: 'Resident was successfully destroyed.' }

@@ -1,9 +1,11 @@
 class PagesController < ApplicationController
 	def index
+		@page = "index";
 		render "index.html.erb"
 	end
 	
 	def modify
+		@page = "index";
 		@id_num = params[:id_num]
 		@message="clear"
 		@resident = Resident.where(id_num: @id_num).take

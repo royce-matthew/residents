@@ -4,26 +4,31 @@ class LogsController < ApplicationController
   # GET /logs
   # GET /logs.json
   def index
+    @page="logs"
     @logs = Log.all
   end
 
   # GET /logs/1
   # GET /logs/1.json
   def show
+    @page="logs"
   end
 
   # GET /logs/new
   def new
+    @page="logs"
     @log = Log.new
   end
 
   # GET /logs/1/edit
   def edit
+    @page="logs"
   end
 
   # POST /logs
   # POST /logs.json
   def create
+    @page="logs"
     @log = Log.new(log_params)
 
     respond_to do |format|
@@ -40,6 +45,7 @@ class LogsController < ApplicationController
   # PATCH/PUT /logs/1
   # PATCH/PUT /logs/1.json
   def update
+    @page="logs"
     respond_to do |format|
       if @log.update(log_params)
         format.html { redirect_to @log, notice: 'Log was successfully updated.' }

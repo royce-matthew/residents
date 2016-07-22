@@ -7,6 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div>
+<a href="/" class="importantBars <%if (@page=='index')%>active<%end%>">Zap Away</a>
+<a href="/residents" class="importantBars <%if (@page=='hookers')%>active<%end%>">Hookers</a>
+
+<a href="/logs" class="importantBars <%if (@page=='logs')%>active<%end%>">Logs</a></div>
 
 <%= yield %>
 
