@@ -12,7 +12,7 @@
   </thead>
 
   <tbody>
-    <% @logs.each do |log| %>
+    <% @logs.order('time DESC').each do |log| %>
       <tr>
         <td><%= log.time %></td>
         <td><%= log.comment %></td>
