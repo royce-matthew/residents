@@ -10,6 +10,7 @@
 	 vertical-align:middle; 
 	 float:left; margin:10px;
 	 display:block;
+	 border-radius:50%;
 }
 #input_bar{font-size:40px; padding:2px; border:0px; border-bottom:solid 1px; text-align: center; margin:30px; padding:20px;}
 #notification

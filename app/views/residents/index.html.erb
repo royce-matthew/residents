@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+    <th>Photo</th>
       <th>Name</th>
       <th>Location</th>
       <th>Room</th>
@@ -16,6 +17,14 @@
   <tbody>
     <% @residents.each do |resident| %>
       <tr>
+      <td>
+      <img src="
+  <%if resident.photo %>
+    <%= resident.photo_link%>
+  <% else %>
+    <%= asset_path 'hooker.png'%>
+  <% end %>
+   " class="notification_logo"></td>
         <td><%= resident.name %></td>
         <td><%= resident.location %></td>
         <td><%= resident.room %></td>
