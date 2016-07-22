@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Hookers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Room</th>
+      <th>Id num</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @residents.each do |resident| %>
+      <tr>
+        <td><%= resident.name %></td>
+        <td><%= resident.location %></td>
+        <td><%= resident.room %></td>
+        <td><%= resident.id_num %></td>
+        <td><%= link_to 'Show', resident %></td>
+        <td><%= link_to 'Edit', edit_resident_path(resident) %></td>
+        <td><%= link_to 'Destroy', resident, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hooker', new_resident_path %>

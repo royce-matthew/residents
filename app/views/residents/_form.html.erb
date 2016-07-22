@@ -1,0 +1,31 @@
+<%= simple_form_for(@resident) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :location, collection: ["in","out"]%>
+    <%= f.input :room %>
+    <%= f.input :photo_link, input_html:{id:"field"}%>
+    <%= f.input :id_num %>
+  </div>
+
+
+
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+  <div class="" id="box"></div>
+
+  <script>
+  field = document.getElementById("field");
+  box = document.getElementById("box");
+  field.addEventListener("keyup",function(f)
+  {
+    box.innerHTML="<div style='background:url("+field.value+");  height:100px; width:100px; background-size:cover; border-radius:50%' ></div>"
+  })
+  </script>
+
+  

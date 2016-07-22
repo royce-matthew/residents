@@ -1,0 +1,45 @@
+
+
+<h4 align="center" style="margin-top:10%">Bugao - Hooker Tracking System</h4>
+<%if @resident != nil%>
+<div id="notification">
+	<img src="
+	<%if @resident.photo %>
+		<%= @resident.photo_link%>
+	<% else %>
+		<%= asset_path 'hooker.png'%>
+	<% end %>
+	 " class="notification_logo">
+	<span class="notification_text"><%= @resident.name%> is <%=@resident.location%></span>
+</div>
+<%end%>
+<br>
+<br>
+
+<div align="center" class="container" > 
+
+<a href="/residents" class="importantBars">View Hookers</a>|<a href="/logs" class="importantBars">View Logs</a>
+<br>
+<sub>Type / Barcode 6 Digit Hooker Number Below to log in or out</sub>
+<br>
+
+<input id="input_bar" autofocus >
+</div>
+
+<script>
+
+input_bar = document.getElementById("input_bar")
+
+$('#input_bar').bind('input', function() { 
+    v = ($(this).val())
+    if (v.length >= 6)
+    {
+    	window.location='/modify/'+v	
+    }
+
+});
+$( document ).ready(function() {
+    $("#notification").delay(1000).fadeOut("slow");
+});
+
+</script>

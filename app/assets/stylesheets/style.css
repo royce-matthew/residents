@@ -1,0 +1,41 @@
+*:focus {
+    outline: none;
+}
+.notification_text
+{
+	font-size:20px;
+}
+.notification_logo{
+	 height:60px; width:60px;  
+	 vertical-align:middle; 
+	 float:left; margin:10px;
+	 display:block;
+}
+#input_bar{font-size:40px; padding:2px; border:0px; border-bottom:solid 1px; text-align: center; margin:30px; padding:20px;}
+#notification
+{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100vw;
+	background-color:white;
+	margin:none;
+	text-align: center;
+
+}
+body
+{
+	margin:none;
+	padding:none;
+}
+
+.importantBars
+{
+	color:rgba(0,0,0,0.8);
+	margin:10px 10px;
+	padding:5px 30px;
+	border:solid 1px;
+	border-radius: 50px;
+	text-decoration: none;
+
+}

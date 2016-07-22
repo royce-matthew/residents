@@ -1,0 +1,27 @@
+class PagesController < ApplicationController
+	def index
+		render "index.html.erb"
+	end
+	
+	def modify
+		@id_num = params[:id_num]
+		@resident = Resident.where(id_num: @id_num).take
+		if @resident != nil
+			if @resident.location == "in"
+				@resident.update_column :location, "out"
+
+			else
+				@resident.update_column :location, "in"
+
+			end
+			
+			@log = Log.new
+			@log.time = DateTime.now
+			@log.comment = "#{@resident.name} is #{@resident.location}"
+			@log.save
+
+		end
+		render "index.html.erb"
+
+	end
+end
