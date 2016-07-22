@@ -13,6 +13,11 @@
 	<span class="notification_text"><%= @resident.name%> is <%=@resident.location%></span>
 </div>
 <%end%>
+<%if @message=="id error" %>
+	<div id="notification" style="background-color:rgba(125,0,0,0.24);">
+	Error, Invalid ID <%= @id_num%>, Please Refer to your 6-digit hooker ID
+	</div>
+<% end %>
 <br>
 <br>
 
@@ -20,7 +25,7 @@
 
 <a href="/residents" class="importantBars">View Hookers</a>|<a href="/logs" class="importantBars">View Logs</a>
 <br>
-<sub>Type / Barcode 6 Digit Hooker Number Below to log in or out</sub>
+<sub>Type / Barcode Zap 6 Digit Hooker Number Below to log in or out</sub>
 <br>
 
 <input id="input_bar" autofocus >

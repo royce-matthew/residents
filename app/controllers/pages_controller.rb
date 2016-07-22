@@ -5,6 +5,7 @@ class PagesController < ApplicationController
 	
 	def modify
 		@id_num = params[:id_num]
+		@message="clear"
 		@resident = Resident.where(id_num: @id_num).take
 		if @resident != nil
 			if @resident.location == "in"
@@ -19,6 +20,8 @@ class PagesController < ApplicationController
 			@log.time = DateTime.now
 			@log.comment = "#{@resident.name} is #{@resident.location}"
 			@log.save
+		else
+			@message="id error"
 
 		end
 		render "index.html.erb"
